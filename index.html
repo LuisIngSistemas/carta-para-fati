@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eres mi felicidad 💖</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fff5f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px 0;
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .screen {
+      display: none;
+      animation: fadeIn 0.8s ease;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .screen.active { display: block; }
+
+    h2 { font-size: 1.35em; }
+
+    .main-img {
+      width: 280px;
+      max-width: 90%;
+      height: auto;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .main-img:hover { transform: scale(1.05); }
+
+    .card {
+      background: repeating-linear-gradient(
+        white, white 28px, #e3e3e3 29px
+      );
+      padding: 35px 30px;
+      border: 2px solid #f3dce5;
+      width: 100%;
+      max-width: 900px;
+      text-align: left;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-family: "Dancing Script", cursive;
+      font-size: 2em;
+      text-align: left;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .card p {
+      font-size: 1em;
+      line-height: 1.8;
+      text-align: justify;
+      color: #444;
+      margin: 12px 0;
+    }
+
+    .return-btn {
+      margin-top: 25px;
+      padding: 12px 22px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff4f81;
+      color: white;
+    }
+
+    .return-btn:hover { background: #ff2a66; }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      color: #ff6b9d;
+      pointer-events: none;
+      z-index: 0;
+      animation: float linear forwards;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 22px 16px; }
+      .card h3 { font-size: 1.6em; text-align: center; }
+      .card p { font-size: 0.95em; }
+      h2 { font-size: 1.1em; }
+      .main-img { width: 220px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <audio id="musica" loop preload="auto">
+    <source src="https://github.com/codeninja543/codeninja5433/raw/refs/heads/main/Chayanne%20-%20Me%20Enamor%C3%A9%20De%20Ti.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="screen active" id="screen1">
+    <h2>HOLA; SOY "YO" TU POLLITO... ¿ME ABRES LA PUERTA? 💗</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIoZc0uZUpJ3AnX7bdY3i7Kmz4D_5ow4-amORSQ83Kag&s=10"
+         alt="Correo" class="main-img" onclick="nextScreen(2)">
+    <p>Toca la imagen para abrir 💌</p>
+  </div>
+
+  <div class="screen" id="screen2">
+    <h2>Tengo algo especial para ti, Fati 💖</h2>
+    <img src="https://i.pinimg.com/736x/08/8a/d8/088ad89bd98763783954b4aa5b957f89.jpg"
+         alt="Carta" class="main-img" onclick="nextScreen(3)">
+  </div>
+
+  <div class="screen" id="screen3">
+    <h2>¡Ábrelo! No te demores :P</h2>
+    <img src="https://i.pinimg.com/736x/0b/97/89/0b978918f0efa0174a6e72d67f2c442a.jpg"
+         alt="Sobre" class="main-img" onclick="nextScreen(4)">
+  </div>
+
+  <div class="screen" id="screen4">
+    <h2>¿Segura que quieres abrirlo?</h2>
+    <h2>Quizás no te guste :(</h2>
+    <img src="https://i.pinimg.com/736x/40/0d/cf/400dcf7b1230e9e6ca787fa30a66c924.jpg"
+         alt="Carta lista" class="main-img" onclick="nextScreen(5)">
+  </div>
+
+  <div class="screen" id="screen5">
+    <div class="card">
+      <h3>PARA: FATIMA SAMPEN 💕</h3>
+      <p>DE: TU FAN NÚMERO 01, EL MÁS GENIAL (CREO) ❤️</p>
+      <p><strong>Gracias por las llamadas en las madrugadas han</strong></p>
+      <p><strong>sido y siguen siendo muy especiales.y tranquila porque se muy bien mi posicion :) y se muy bien como van los hechos y la realidad</strong></p>
+      <p>queria hacerte este pequeño detalle hoy 19/10/26 - justo estas yendo a lima-.</p>
+      <p>hoy es un dia unico 22/09/18 - 22/10/2026  y lo sabes y quizas me regañes o quizas llores por el detalle pero nace de corazon- discualpame enserio por ser asi.</p>
+      <p>te estimo mucho y estoy orgulloso por que estas ejerciendo tu carrera y creeme que yo a pesar de todo sere esa persona numero 01 en .</p>
+      <p>apoyarte absolutamente , ESTOY ORGULLOSO DE TI FATIMA SAMPEN MEGO y jamas me cansare de decirtelo enserio a pesar que ya te lo dije muchas veces, pero ya sabes como soy asi de romantico
+         y loquillo pero de " love ", nose si es bueno o malo jajaja tu frase se me pego.Que tengas un dia super bonito y de chamba al menos para que incies tu dia con una bella sonrisa en esa cara 
+         tan hermosa como siempre te lo digo.
+         Esperare tu llamada o bueno...
+      </p>
+      <p>Mi querida polluela estoy llorando de NOSTALGIA</p>
+      <p>Tendras a tu pollo en el fondo de tu corazon 💗</p>
+      <p>Con todo mi cariño para ti mi "F"</p>
+      <div style="text-align:center">
+        <button class="return-btn" onclick="nextScreen(1)">😍 TE AMOO</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById("musica");
+    let musicaIniciada = false;
+
+    function iniciarMusica() {
+      if (musicaIniciada) return;
+
+      // Intenta comenzar desde el segundo 34.
+      audio.currentTime = 34;
+
+      audio.play()
+        .then(() => { musicaIniciada = true; })
+        .catch(() => {
+          // Si falla la carga, se puede volver a intentar con otro toque.
+          musicaIniciada = false;
+        });
+    }
+
+    function nextScreen(num) {
+      iniciarMusica();
+
+      document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+      });
+
+      document.getElementById("screen" + num).classList.add("active");
+    }
+
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.className = "heart";
+      corazon.textContent = "❤️";
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.fontSize = (Math.random() * 20 + 15) + "px";
+      corazon.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+      document.body.appendChild(corazon);
+      setTimeout(() => corazon.remove(), 7000);
+    }
+
+    setInterval(crearCorazon, 400);
+  </script>
+
+</body>
+</html>
